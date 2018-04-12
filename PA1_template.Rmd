@@ -2,8 +2,18 @@
 title: "Assignment_W2"
 author: "Leandro Santos"
 date: "April 6, 2018"
-output: html_document
+output:
+  html_document: 
+    fig_caption: yes
+    toc: yes
 ---
+
+#### LOAD KNITR AND SET OPTION TO CREATE FIGURES IN SPECIFIC DIRECTORY
+```{r}
+library(knitr)
+opts_chunk$set(fig.path = "./figure/")
+```
+
 - Load the data (i.e. read.csv())
 - Process/transform the data (if necessary) into a format suitable for your analysis
 
@@ -135,6 +145,5 @@ library(ggplot2)
 q <- ggplot(weekly, aes(interval, steps, group=1))
 q+geom_line()+facet_grid(.~week)
 ```
-
 
 
